@@ -1,13 +1,44 @@
 {
-  "name": "bochinche",
+  "name": "base-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "serve.js",
+  "description": "template base",
+  "main": ".eleventy.js",
+  "type": "module",
   "scripts": {
-    "start": "node serve.js"
+    "install": "npm install @11ty/eleventy@3.0.0 --save-dev",
+    "start": "npx @11ty/eleventy@3.0.0 --serve --port=7799",
+    "build": "npx @11ty/eleventy@3.0.0",
+    "clean": "rm -rf docs",
+    "deploy": "npm run build && echo 'Desplegado en la raíz'",
+    "deploy-subdomain": "npx @11ty/eleventy@3.0.0 --pathprefix=/subdirectory/ && echo 'Desplegado en subdirectorio'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ylnaud/bochinche.git"
+  },
+  "keywords": [
+    "eleventy"
+  ],
+  "author": "duanly vega alderete",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ylnaud/bochinche/issues"
+  },
+  "homepage": "https://github.com/ylnaud/bochinche#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-server-browsersync": "^1.0.2",
+    "browser-sync": "^3.0.4",
+    "clean-css": "^5.3.3",
+    "eleventy-google-fonts": "^0.1.0",
+    "google-fonts-inline": "^1.0.1",
+    "html-minifier-terser": "^7.2.0",
+    "terser": "^5.39.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-fetch": "^5.0.2",
+    "@11ty/eleventy-img": "^6.0.1",
+    "@11ty/eleventy-plugin-bundle": "^3.0.1",
+    "@fortawesome/fontawesome-free": "^6.7.2"
+  }
 }

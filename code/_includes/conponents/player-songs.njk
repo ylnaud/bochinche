@@ -1,0 +1,43 @@
+<!-- components/music-player.njk -->
+<div class="music-player">
+  <audio id="backgroundMusic" loop></audio>
+
+  <div class="player-controls">
+    <button class="minimize-btn">
+      <i class="fas fa-compress"></i>
+    </button>
+
+    <div class="song-info">
+      <span id="currentSong">Reproductor de Música</span>
+      <div class="progress-container" id="progressContainer">
+        <div class="progress" id="progressBar"></div>
+      </div>
+      <div class="time-info">
+        <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="prevBtn" title="Canción anterior">
+        <i class="fas fa-step-backward"></i>
+      </button>
+      <button id="playPauseBtn" title="Reproducir/Pausar">
+        <i class="fas fa-play"></i>
+      </button>
+      <button id="nextBtn" title="Siguiente canción">
+        <i class="fas fa-step-forward"></i>
+      </button>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.7" title="Volumen">
+      <button id="volumeBtn" title="Silenciar">
+        <i class="fas fa-volume-up"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="playlist-container">
+    <h3>Playlist</h3>
+    <ul id="playlist">
+      <!-- Las canciones se agregarán dinámicamente con JS -->
+    </ul>
+  </div>
+</div>

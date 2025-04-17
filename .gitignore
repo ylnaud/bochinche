@@ -1,1 +1,4 @@
 .zed
+node_modules
+.cache
+.env

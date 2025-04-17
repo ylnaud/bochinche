@@ -1,0 +1,891 @@
+---
+layout: layouts/base.njk
+title: El Bochinche - Comida Colombiana Auténtica
+---
+
+<!-- Efectos de ambiente -->
+<div class="time-based-bg" id="timeBackground"></div>
+<div class="bar-lights">
+  <div class="light"></div>
+  <div class="light"></div>
+  <div class="light"></div>
+</div>
+<div class="smoke-effect"></div>
+
+<!-- Sección Hero -->
+<section class="hero" id="inicio">
+  <div class="container flex-between">
+    <div class="hero-content">
+      <h1 class="text-gradient">Sabores Auténticos de Colombia</h1>
+      <p>
+        En El Bochinche, cada plato cuenta una historia de tradición y pasión
+        por la cocina colombiana. Disfruta de nuestros sabores únicos en un
+        ambiente cálido y acogedor.
+      </p>
+      <div class="btn-group">
+        <a href="#menu" class="btn btn-primary">
+          <i class="fas fa-book-open"></i> Ver Menú
+        </a>
+        <a href="#reservas" class="btn btn-outline">
+          <i class="fas fa-calendar-alt"></i> Reservar
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        alt="Comida colombiana"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Sección Especialidades -->
+<section class="section bg-dark">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nuestras Especialidades</h2>
+      <p>Platos emblemáticos que definen la esencia de nuestra cocina</p>
+    </div>
+
+    <div class="grid grid-cols-3 grid-cols-2 grid-cols-1">
+      <div class="card animate animate-delay-1">
+        <img
+          src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          alt="Bandeja Paisa"
+          class="card-image"
+        />
+        <div class="card-body">
+          <h3 class="card-title">Bandeja Paisa</h3>
+          <p class="card-text">
+            El plato más representativo de Antioquia, con frijoles, arroz,
+            chicharrón, carne molida, chorizo, huevo frito, aguacate y arepa.
+          </p>
+        </div>
+        <div class="card-footer">
+          <span class="card-price">7.90 €</span>
+          <a href="#" class="btn btn-sm btn-accent btn-min-content">Ordenar</a>
+        </div>
+      </div>
+
+      <div class="card animate animate-delay-2">
+        <!--img-->
+        <div class="card-body">
+          <h3 class="card-title">Ajiaco Santafereño</h3>
+          <p class="card-text">
+            Sopa tradicional bogotana con tres tipos de papa, pollo, guascas,
+            crema de leche y alcaparras. Acompañado de aguacate y arroz.
+          </p>
+        </div>
+        <div class="card-footer">
+          <span class="card-price">8.00 €</span>
+          <a href="#" class="btn btn-sm btn-accent btn-min-content">Ordenar</a>
+        </div>
+      </div>
+
+      <div class="card animate animate-delay-3">
+        <img
+          src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          alt="Sancocho"
+          class="card-image"
+        />
+        <div class="card-body">
+          <h3 class="card-title">Sancocho de Gallina</h3>
+          <p class="card-text">
+            El sancocho más tradicional, preparado con gallina criolla, yuca,
+            plátano, mazorca y hierbas aromáticas. Servido con arroz y aguacate.
+          </p>
+        </div>
+        <div class="card-footer">
+          <span class="card-price">7.00 €</span>
+          <a href="#" class="btn btn-sm btn-accent btn-min-content">Ordenar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Menú -->
+<section class="section" id="menu" aria-label="Menú del restaurante">
+  <div class="container">
+    <header class="section-title justfy-content-center">
+      <h2>Nuestro Menú</h2>
+      <p>Explora la diversidad de sabores que ofrece nuestra cocina</p>
+    </header>
+
+    <nav class="menu-categories" aria-label="Categorías del menú">
+      <ul class="tabs">
+        <li>
+          <button
+            class="tabs-tab active entry"
+            data-tab="entradas"
+            aria-controls="entradas"
+          >
+            Entradas
+          </button>
+        </li>
+        <li>
+          <button
+            class="tabs-tab entry"
+            data-tab="platos-fuertes"
+            aria-controls="platos-fuertes"
+          >
+            Platos Fuertes
+          </button>
+        </li>
+        <li>
+          <button
+            class="tabs-tab entry"
+            data-tab="bebidas"
+            aria-controls="bebidas"
+          >
+            Bebidas
+          </button>
+        </li>
+        <li>
+          <button
+            class="tabs-tab entry"
+            data-tab="postres"
+            aria-controls="postres"
+          >
+            Postres
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <article
+      class="tabs-content active"
+      id="entradas"
+      role="tabpanel"
+      aria-labelledby="entradas-tab"
+    >
+      <section class="menu-category" aria-labelledby="entradas-frias-heading">
+        <h3 id="entradas-frias-heading">Entradas Frías</h3>
+
+        <ul class="menu-items">
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Patacones con Hogao</h4>
+              <p class="item-description">
+                Plátano verde frito acompañado de nuestra salsa hogao
+                tradicional
+              </p>
+            </div>
+            <span class="item-price">4.20 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Arepas de Choclo</h4>
+              <p class="item-description">
+                Arepas dulces de maíz tierno con queso fundido
+              </p>
+            </div>
+            <span class="item-price">6.50 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Ensalada de Aguacate</h4>
+              <p class="item-description">
+                Aguacate fresco con tomate, cebolla y cilantro
+              </p>
+            </div>
+            <span class="item-price">7.30 €</span>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        class="menu-category"
+        aria-labelledby="entradas-calientes-heading"
+      >
+        <h3 id="entradas-calientes-heading">Entradas Calientes</h3>
+
+        <ul class="menu-items">
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Empanadas Colombianas</h4>
+              <p class="item-description">
+                Tres empanadas de carne molida con aji picante
+              </p>
+            </div>
+            <span class="item-price">4.00 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Chicharrón con Limón</h4>
+              <p class="item-description">
+                Crujiente chicharrón de cerdo con limón y ají
+              </p>
+            </div>
+            <span class="item-price">7.50 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Aborrajados</h4>
+              <p class="item-description">
+                Plátano maduro relleno de queso y frito
+              </p>
+            </div>
+            <span class="item-price">11.30 €</span>
+          </li>
+        </ul>
+      </section>
+    </article>
+
+    <article
+      class="tabs-content"
+      id="platos-fuertes"
+      role="tabpanel"
+      aria-labelledby="platos-fuertes-tab"
+      hidden
+    >
+      <section
+        class="menu-category"
+        aria-labelledby="platos-tradicionales-heading"
+      >
+        <h3 id="platos-tradicionales-heading">Platos Tradicionales</h3>
+
+        <ul class="menu-items">
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Bandeja Paisa</h4>
+              <p class="item-description">
+                Frijoles, arroz, chicharrón, carne molida, chorizo, huevo frito,
+                aguacate y arepa
+              </p>
+            </div>
+            <span class="item-price">15.70 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Ajiaco Santafereño</h4>
+              <p class="item-description">
+                Sopa con tres papas, pollo, guascas, crema de leche y alcaparras
+              </p>
+            </div>
+            <span class="item-price">10.50 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Sancocho de Gallina</h4>
+              <p class="item-description">
+                Gallina criolla, yuca, plátano, mazorca y hierbas aromáticas
+              </p>
+            </div>
+            <span class="item-price">11.90 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Lechona Tolimense</h4>
+              <p class="item-description">
+                Cerdo relleno de arroz y garbanzos, cocinado por 12 horas
+              </p>
+            </div>
+            <span class="item-price">26.00 €</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="menu-category" aria-labelledby="platos-mar-heading">
+        <h3 id="platos-mar-heading">Platos de Mar</h3>
+
+        <ul class="menu-items">
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Arroz con Coco y Camarón</h4>
+              <p class="item-description">
+                Arroz con leche de coco y camarones frescos
+              </p>
+            </div>
+            <span class="item-price">20.90 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Cazuela de Mariscos</h4>
+              <p class="item-description">
+                Mezcla de mariscos en salsa de coco y hierbas
+              </p>
+            </div>
+            <span class="item-price">15.50 €</span>
+          </li>
+        </ul>
+      </section>
+    </article>
+
+    <article
+      class="tabs-content"
+      id="bebidas"
+      role="tabpanel"
+      aria-labelledby="bebidas-tab"
+      hidden
+    >
+      <section
+        class="menu-category"
+        aria-labelledby="bebidas-tradicionales-heading"
+      >
+        <h3 id="bebidas-tradicionales-heading">Bebidas Tradicionales</h3>
+
+        <ul class="menu-items">
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Jugo de Lulo</h4>
+              <p class="item-description">
+                Refrescante jugo de la fruta tropical colombiana
+              </p>
+            </div>
+            <span class="item-price">6.00 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Jugo de Guanábana</h4>
+              <p class="item-description">Jugo cremoso de esta fruta exótica</p>
+            </div>
+            <span class="item-price">5.00 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Limonada de Coco</h4>
+              <p class="item-description">
+                Limonada con leche de coco, refrescante y dulce
+              </p>
+            </div>
+            <span class="item-price">4.00 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Aguardiente Antioqueño</h4>
+              <p class="item-description">
+                Trago tradicional colombiano (por copa)
+              </p>
+            </div>
+            <span class="item-price">3.00 €</span>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        class="menu-category"
+        aria-labelledby="cafes-colombianos-heading"
+      >
+        <h3 id="cafes-colombianos-heading">Cafés Colombianos</h3>
+
+        <ul class="menu-items">
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Tinto Tradicional</h4>
+              <p class="item-description">Café negro colombiano</p>
+            </div>
+            <span class="item-price">1.20 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Café con Leche</h4>
+              <p class="item-description">
+                Café colombiano con leche vaporizada
+              </p>
+            </div>
+            <span class="item-price">1.80 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Café de Olla</h4>
+              <p class="item-description">
+                Café preparado con panela y especias
+              </p>
+            </div>
+            <span class="item-price">3.00 €</span>
+          </li>
+        </ul>
+      </section>
+    </article>
+
+    <article
+      class="tabs-content"
+      id="postres"
+      role="tabpanel"
+      aria-labelledby="postres-tab"
+      hidden
+    >
+      <section
+        class="menu-category"
+        aria-labelledby="postres-tradicionales-heading"
+      >
+        <h3 id="postres-tradicionales-heading">Postres Tradicionales</h3>
+
+        <ul class="menu-items">
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Postre de Natas</h4>
+              <p class="item-description">
+                Dulce típico antioqueño a base de leche
+              </p>
+            </div>
+            <span class="item-price">6.00 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Brevas con Arequipe</h4>
+              <p class="item-description">
+                Brevas rellenas de arequipe (dulce de leche)
+              </p>
+            </div>
+            <span class="item-price">3.00 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Cocadas</h4>
+              <p class="item-description">
+                Dulces de coco en diferentes sabores
+              </p>
+            </div>
+            <span class="item-price">4.00 €</span>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-info">
+              <h4 class="item-name">Tres Leches</h4>
+              <p class="item-description">
+                Bizcocho empapado en mezcla de tres leches
+              </p>
+            </div>
+            <span class="item-price">5.00 €</span>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </div>
+</section>
+
+<!-- Sección Galería -->
+<section class="section bg-dark" id="galeria">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nuestra Galería</h2>
+      <p>Un vistazo a nuestros platos y ambiente</p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          alt="Comida colombiana"
+        />
+        <div class="gallery-caption">
+          <h3>Bandeja Paisa</h3>
+          <p>Nuestro plato insignia</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <!--img -->
+        <div class="gallery-caption">
+          <h3>Ajiaco Santafereño</h3>
+          <p>Sopa tradicional bogotana</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          alt="Sancocho"
+        />
+        <div class="gallery-caption">
+          <h3>Sancocho de Gallina</h3>
+          <p>El sancocho más tradicional</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          alt="Bandeja Paisa"
+        />
+        <div class="gallery-caption">
+          <h3>Bandeja Paisa</h3>
+          <p>Plato representativo de Antioquia</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          alt="Arepas"
+        />
+        <div class="gallery-caption">
+          <h3>Arepas Colombianas</h3>
+          <p>De diferentes regiones</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          alt="Empanadas"
+        />
+        <div class="gallery-caption">
+          <h3>Empanadas</h3>
+          <p>Empanadas colombianas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Testimonios -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <p>Experiencias reales de quienes nos visitan</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="testimonial-content">
+          "El mejor lugar para ver fútbol en la ciudad. La terraza es increíble
+          y la comida colombiana es auténtica."
+        </div>
+        <div class="testimonial-author">
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Carlos M."
+          />
+          <div>
+            <h4>Carlos M.</h4>
+            <p>Cliente frecuente</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="testimonial-content">
+          "Llevé a mi familia y los niños disfrutaron mucho en la zona infantil
+          mientras nosotros veíamos el partido."
+        </div>
+        <div class="testimonial-author">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="María L."
+          />
+          <div>
+            <h4>María L.</h4>
+            <p>Cliente familiar</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="testimonial-content">
+          "Los combos grupales son perfectos para ir con amigos. Buena relación
+          calidad-precio."
+        </div>
+        <div class="testimonial-author">
+          <img
+            src="https://randomuser.me/api/portraits/men/67.jpg"
+            alt="Andrés F."
+          />
+          <div>
+            <h4>Andrés F.</h4>
+            <p>Visita en grupo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Nosotros -->
+<section class="section bg-dark" id="nosotros">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nuestra Historia</h2>
+      <p>Conoce más sobre El Bochinche</p>
+    </div>
+
+    <div class="flex-between">
+      <div class="markdown-content" style="flex: 1; padding-right: 4rem">
+        <h2>Sabores que cuentan historias</h2>
+        <p>
+          El Bochinche nació en 2015 con el sueño de llevar los auténticos
+          sabores colombianos a todos los rincones. Fundado por la familia
+          Romeros, inmigrantes cubano con una pasión por la cocina tradicional
+          colombiana.
+        </p>
+
+        <p>
+          Cada receta en nuestro menú ha sido transmitida de generación en
+          generación, preservando los métodos tradicionales de preparación que
+          hacen única a la gastronomía colombiana.
+        </p>
+
+        <h2>Nuestra Filosofía</h2>
+        <p>
+          Creemos que la comida es más que nutrición; es cultura, tradición y
+          amor. Por eso:
+        </p>
+        <ul>
+          <li>Usamos ingredientes frescos y de la más alta calidad</li>
+          <li>Preparamos cada plato con el mismo cuidado que en casa</li>
+          <li>
+            Ofrecemos un ambiente cálido que refleja la calidez colombiana
+          </li>
+          <li>Innovamos respetando siempre las raíces tradicionales</li>
+        </ul>
+      </div>
+
+      <div style="flex: 1">
+        <img
+          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          alt="Equipo de El Bochinche"
+          class="rounded"
+          style="width: 100%"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Contacto -->
+<section class="section" id="contacto">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contáctanos</h2>
+      <p>Estamos aquí para atenderte</p>
+    </div>
+
+    <div class="flex-between">
+      <div class="form form-sm">
+        <h3>Envíanos un mensaje</h3>
+        <form id="contactForm" netlify>
+          <div class="form-group">
+            <label for="name" class="form-label">Nombre</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="tu@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="form-label">Teléfono (opcional)</label>
+            <input
+              type="tel"
+              id="phone"
+              class="form-control"
+              placeholder="+34 389 897 989"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea
+              id="message"
+              class="form-control"
+              rows="5"
+              placeholder="Tu mensaje..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div style="flex: 1; padding-left: 4rem">
+        <h3>Información de contacto</h3>
+        <div class="markdown-content">
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            <strong>Dirección:</strong> Calle. Secretario Artiles,<br />
+            77, 35007 Las Palmas de Gran Canaria, Las Palmas
+          </p>
+          <p>
+            <i class="fas fa-phone"></i> <strong>Teléfono:</strong> +34
+            678899543
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <strong>Email:</strong> hola@elbochinche.com
+          </p>
+
+          <h3>Horario de atención</h3>
+          <p><strong>Lunes a Jueves:</strong> 15:00 PM - 00:00 PM</p>
+          <p><strong>Viernes y Sábado:</strong> 15:00 PM - 00:00 PM</p>
+          <p><strong>Domingo:</strong> 17:00 AM - 11:00 PM</p>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Reservas -->
+<section class="section bg-dark" id="reservas">
+  <div class="container">
+    <div class="section-title">
+      <h2>Reserva tu mesa</h2>
+      <p>Garantiza tu espacio en nuestro restaurante</p>
+    </div>
+
+    <div class="form form-md" style="max-width: 800px; margin: 0 auto">
+      <form id="reservationForm" netlify data-netlify-recaptcha="true">
+        <div class="grid grid-cols-2" style="gap: 2rem">
+          <div class="form-group">
+            <label for="reservation-name" class="form-label"
+              >Nombre completo</label
+            >
+            <input
+              type="text"
+              id="reservation-name"
+              class="form-control"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reservation-email" class="form-label"
+              >Correo electrónico</label
+            >
+            <input
+              type="email"
+              id="reservation-email"
+              class="form-control"
+              placeholder="tu@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reservation-phone" class="form-label">Teléfono</label>
+            <input
+              type="tel"
+              id="reservation-phone"
+              class="form-control"
+              placeholder="+34 656 987 656"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reservation-date" class="form-label">Fecha</label>
+            <input
+              type="date"
+              id="reservation-date"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reservation-time" class="form-label">Hora</label>
+            <input
+              type="time"
+              id="reservation-time"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reservation-guests" class="form-label"
+              >Número de personas</label
+            >
+            <select id="reservation-guests" class="form-control" required>
+              <option value="">Selecciona...</option>
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+              <option value="5">5 personas</option>
+              <option value="6">6 personas</option>
+              <option value="7">7 personas</option>
+              <option value="8">8 personas</option>
+              <option value="9">9 personas</option>
+              <option value="10">10 personas</option>
+              <option value="11">Más de 10 personas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reservation-notes" class="form-label"
+            >Notas adicionales (opcional)</label
+          >
+          <textarea
+            id="reservation-notes"
+            class="form-control"
+            rows="3"
+            placeholder="Alergias, requerimientos especiales, etc."
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-calendar-check"></i> Confirmar Reserva
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
