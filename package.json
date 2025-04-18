@@ -1,5 +1,5 @@
 {
-  "name": "base-project",
+  "name": "bochinche",
   "version": "1.0.0",
   "description": "template base",
   "main": ".eleventy.js",
