@@ -1,0 +1,34 @@
+{
+  "theme": "One Dark",
+  "font_size": 14,
+  "tab_size": 2,
+  "line_numbers": true,
+  "auto_save": "on_focus_change",
+  "soft_wrap": "editor_width",
+  "preferred_line_length": 80,
+  "keymap": {
+    "save": "ctrl+s",
+    "close_tab": "ctrl+w"
+  },
+  "file_types": {
+    "Jinja2": ["*.html", "*.njk"]
+  },
+  "files": {
+    "associations": {
+      "**/*.njk": "html",
+      "**/*.11ty.js": "javascript",
+      "**/_includes/*.html": "html"
+    }
+  },
+  "lsp": {
+    "html": {
+      "command": "vscode-html-language-server",
+      "args": ["--stdio"],
+      "file_types": ["html", "njk"]
+    },
+    "css": {
+      "command": "vscode-css-language-server",
+      "args": ["--stdio"]
+    }
+  }
+}
