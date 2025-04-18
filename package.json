@@ -10,7 +10,7 @@
     "build": "npx @11ty/eleventy@3.0.0",
     "clean": "rm -rf docs",
     "deploy": "npm run build && echo 'Desplegado en la raíz'",
-    "deploy-subdomain": "npx @11ty/eleventy@3.0.0 --pathprefix=/bochinche-es.netlify.app/ && echo 'Desplegado en subdirectorio'"
+    "deploy-subdomain": "npx @11ty/eleventy@3.0.0 --pathprefix=// && echo 'Desplegado en subdirectorio'"
   },
   "repository": {
     "type": "git",
