@@ -218,4 +218,3 @@ function updateVolumeIcon() {
 }
 
 // Inicializar reproductor
-initMusic();

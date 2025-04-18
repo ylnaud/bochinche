@@ -157,20 +157,18 @@ body {
 
 /* Sección Hero */
 .hero {
-  padding: 12rem 0 6rem;
+  padding: 8rem 2rem 4rem;
   background: linear-gradient(to right, var(--secondary) 50%, transparent 50%);
 }
 
 .hero-content {
-  flex: 1;
-  padding-right: 4rem;
+  flex: 1 1 100%;
+  max-width: 600px;
 }
-
-.hero p {
-  font-size: 1.8rem;
-  color: var(--text-muted);
-  margin-bottom: 3rem;
-  line-height: 1.6;
+.hero-content p {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
 .btn-group {
@@ -511,10 +509,51 @@ body {
 }
 
 /* Sección Nosotros */
+#nosotros .flex-between {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  text-align: center;
+}
+
+#nosotros .markdown-content {
+  flex: 1 1 100%;
+  max-width: 600px;
+  padding-right: 0;
+}
+
+#nosotros img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: var(--border-radius);
+  display: block;
+}
+
+/* Vista en tablets y PC: dos columnas */
+@media (min-width: 768px) {
+  #nosotros .flex-between {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #nosotros .markdown-content,
+  #nosotros .flex-between > div:last-child {
+    flex: 1 1 50%;
+    max-width: 48%;
+  }
+
+  #nosotros .markdown-content {
+    padding-right: 4rem;
+  }
+}
+
 .flex-between {
   display: flex;
   justify-content: space-between;
-  gap: 4rem;
+  /* gap: 4rem;*/
 }
 
 .markdown-content {
@@ -621,6 +660,11 @@ body {
   width: 100%;
   max-width: 600px;
   text-align: center;
+}
+.section.contacto .form {
+  width: 100%;
+  max-width: 600px;
+  text-align: start;
 }
 
 /* Estilo escritorio: columnas centradas */
@@ -1129,6 +1173,7 @@ body {
   .main-nav.active {
     transform: translateY(0);
     opacity: 1;
+    text-align: center;
   }
 
   .main-nav ul {

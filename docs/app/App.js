@@ -1,8 +1,14 @@
+import { initNavigation, initScrollSpy } from "./components/navegacion.js";
 import "./components/fondo.js";
 import "./components/form.js";
-import { navigation } from "./components/navegacion.js";
-import "./components/palyer-songs.js";
+import { initMusic } from "./components/palyer-songs.js";
+
+function AppJs() {
+  initNavigation();
+  initScrollSpy();
+  initMusic();
+}
 
 export function App() {
-  navigation();
+  AppJs();
 }
