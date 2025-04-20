@@ -14,10 +14,30 @@
   --header-height: 70px;
   --base-unit: 1rem;
 
-  /* Transiciones */
+  /* Escala de tipografía responsiva basada en viewport */
+  --fluid-min-width: 320px; /* Mobile pequeño */
+  --fluid-max-width: 1600px; /* Desktop grande */
+
+  /* Tamaños base (móvil) */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-3xl: 1.875rem; /* 30px */
+  --text-4xl: 2.25rem; /* 36px */
+  --text-5xl: 3rem; /* 48px */
+  --text-6xl: 3.75rem; /* 60px */
+
+  /* Tus transiciones existentes */
   --transition-smooth: all 0.3s ease;
   --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
+  /* Variables para animaciones */
+  --animation-distance: 30px;
+  --animation-delay-step: 0.1s;
+  --animation-scale-amount: 0.95;
   /* Sombras */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -40,17 +60,50 @@ html {
 
 body {
   font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.6rem;
+  font-size: clamp(var(--text-base), 1vw + 0.5rem, 1.125rem);
   line-height: 1.6;
   color: var(--text);
   background-color: var(--secondary);
   overflow-x: hidden;
 }
 
+h1 {
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-6xl));
+}
+h2 {
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-5xl));
+}
+h3 {
+  font-size: clamp(var(--text-xl), 3vw, var(--text-4xl));
+}
+h4 {
+  font-size: clamp(var(--text-lg), 2.5vw, var(--text-3xl));
+}
+h5 {
+  font-size: clamp(var(--text-base), 2vw, var(--text-2xl));
+}
+h6 {
+  font-size: clamp(var(--text-sm), 1.5vw, var(--text-xl));
+}
+
+p,
+li,
+a {
+  font-size: inherit;
+  line-height: 1.6;
+}
+
+small,
+.text-sm {
+  font-size: var(--text-xs);
+}
+
+/* Ajustes para contenedores (opcional) */
 .container {
-  width: 100%;
-  padding: 0 2rem;
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* Header */
@@ -72,6 +125,14 @@ body {
 
 .entry {
   font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: clamp(1rem, 1rem, 4vw, 3rem);
 }
 
 .logo {
@@ -335,12 +396,21 @@ body {
 }
 
 .animate-delay-1 {
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 .animate-delay-2 {
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 .animate-delay-3 {
+  transition-delay: 0.3s;
+}
+.animate-delay-4 {
+  transition-delay: 0.4s;
+}
+.animate-delay-5 {
+  transition-delay: 0.5s;
+}
+.animate-delay-6 {
   transition-delay: 0.6s;
 }
 
@@ -532,6 +602,9 @@ body {
 
 /* Vista en tablets y PC: dos columnas */
 @media (min-width: 768px) {
+  body {
+    line-height: 1.5;
+  }
   #nosotros .flex-between {
     flex-direction: row;
     justify-content: center;

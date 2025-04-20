@@ -6,11 +6,11 @@
   "type": "module",
   "scripts": {
     "install": "npm install @11ty/eleventy@3.0.0 --save-dev",
-    "start": "npx @11ty/eleventy@3.0.0 --serve --port=7799",
-    "build": "npx @11ty/eleventy@3.0.0",
+    "dev": "gulp && npx @11ty/eleventy --serve",
+    "build": "NODE_ENV=production gulp && npx @11ty/eleventy",
     "clean": "rm -rf docs",
     "deploy": "npm run build && echo 'Desplegado en la raíz'",
-    "deploy-subdomain": "npx @11ty/eleventy@3.0.0 --pathprefix=// && echo 'Desplegado en subdirectorio'"
+    "deploy-subdomain": "npx @11ty/eleventy@3.0.0 --pathprefix=bochinche && echo 'Desplegado en subdirectorio'"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,10 @@
     "@11ty/eleventy-fetch": "^5.0.2",
     "@11ty/eleventy-img": "^6.0.1",
     "@11ty/eleventy-plugin-bundle": "^3.0.1",
-    "@fortawesome/fontawesome-free": "^6.7.2"
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-terser": "^2.1.0"
   }
 }

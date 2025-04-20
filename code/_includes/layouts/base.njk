@@ -16,9 +16,11 @@
   <body>
   {% include "header.njk" %}
     <!-- Contenido Principal -->
-    <main>{{ content | safe }}</main>
+    <main>
+    {{ content | safe }}
+    </main>
     {% include "conponents/player-songs.njk"%}
-{% include "footer.njk"%}
+     {% include "footer.njk"%}
 
     <script type="module" src="/app/index.js"></script>
   </body>
